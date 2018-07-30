@@ -1,7 +1,10 @@
 import URL from 'url';
 
 export default function(req) {
-  const url = URL.parse(req.url);
+  const protocol = req.headers['x-forwarded-proto'] || 'http';
+  const host = req.headers['host'];
+  const path = req.url;
+  const url = URL.parse(`${protocol}://${host}${path}`);
   let port = url.port || 80;
   if (url.protocol && url.protocol.startsWith('https')) {
     port = 443;

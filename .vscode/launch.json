@@ -31,16 +31,15 @@
       "protocol": "inspector",
       "sourceMaps": true,
       "env": {
-        "DEBUG": "1",
+        "DEBUG": "1"
       },
-      "runtimeVersion": "8.11.1",
       "args": [
         "-r",
         "ts-node/register",
         "--nolazy",
         "${workspaceRoot}/src/bin/index.ts",
         "--no-update",
-        "--no-sync",
+        "--no-sync"
       ]
     }
   ]
