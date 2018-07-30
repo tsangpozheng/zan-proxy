@@ -8,6 +8,14 @@ export class HttpHandler implements IHttpHandler {
     this.middleware = () => Promise.resolve(null);
   }
   public async handle(req, res) {
+    console.log('headers:', req.headers);
+    const protocol = req.headers['x-forwarded-proto'] || 'http';
+    const host = req.headers['host'];
+    const path = req.url;
+    req.url = `${protocol}://${host}${path}`;
+
+    console.log('to url:', req.url);
+
     const context: any = {
       req,
       res,
