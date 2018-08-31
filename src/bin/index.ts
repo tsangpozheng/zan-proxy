@@ -22,7 +22,8 @@ program
   .parse(process.argv);
 
 async function run() {
-  if (program.update) {
+  if (program.update && false) {
+    // NOTE: don't update run in docker
     await selfUpdate();
   }
   if (program.sync) {
