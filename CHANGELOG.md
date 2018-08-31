@@ -1,5 +1,27 @@
 # Github Change Log
 
+## zan-proxy@4.0.22 (2018-08-08)
+
+**Fixed bug:**
+
+- [windows下设置HOME环境变量后, postinstall和zan-proxy的HOME目录不一致](https://github.com/youzan/zan-proxy/issues/66)
+
+## zan-proxy@4.0.21 (2018-08-07)
+
+**Fixed bugs:**
+
+- [修复windows下最近检查时间路径问题](https://github.com/youzan/zan-proxy/issues/61)
+- [编辑规则时, 请求动作新增和删除功能不合理](https://github.com/youzan/zan-proxy/issues/60)
+
+
+## zan-proxy@4.0.20 (2018-08-02)
+
+**Implemented enhancements:**
+
+- 支持转发规则优先级调整
+- 支持复制cURL请求到粘贴板
+- 检查更新后24小时内不再检查
+
 ## zan-proxy@4.0.19 (2018-07-24)
 
 **Implemented enhancements:**
