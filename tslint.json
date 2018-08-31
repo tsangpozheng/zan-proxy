@@ -5,6 +5,7 @@
   "rules": {
     "interface-name": false,
     "no-console": false,
+    "no-string-literal": false,
     "no-var-requires": false,
     "no-string-literal": false,
     "quotemark": [true, "single", "jsx-double"],

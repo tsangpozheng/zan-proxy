@@ -18,6 +18,12 @@ export class UpgradeHandler implements IUpgradeHandler {
     this.middleware = middleware;
   }
   public async handle(req, socket, head) {
+    console.log('UpgradeHandler:', req.url);
+    console.log('UpgradeHandler:', req.headers);
+
+    const ptc = req.headers['x-forwarded-proto'] === 'https' ? 'wss' : 'ws';
+    req.url = req.url.replace(/^(wss?)/, ptc);
+
     const ctx = {
       head,
       req,
